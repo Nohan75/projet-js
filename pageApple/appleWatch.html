@@ -11,7 +11,9 @@
 
     <section id="apple-product">
         <div class="img">
-            <img class="watch-img" src="applewatch.jpg" alt="photo de l'apple watch serie 6">
+            <img class="watch-img" id="blackWatch" src="blackWatch.jpeg" alt="photo de l'apple watch serie 6">
+            <!-- <img class="watch-img hiddenImg" id="redWatch" src="redWatch.jpeg" alt="photo de l'apple watch serie 6">
+            <img class="watch-img hiddenImg" id="whiteWatch" src="whiteWatch.jpeg" alt="photo de l'apple watch serie 6"> -->
         </div>
         <div class="watch-info">
             <h1 class="watch-title">Apple Watch Series 6</h1>
@@ -19,13 +21,13 @@
             <a target="_blank" href="https://www.amazon.fr/Nouveau-Apple-Watch-aluminium-gris-sid%C3%A9ral-Bracelet-Sport/dp/B08J6N7LFW?ref_=Oct_s9_apbd_otopr_hd_bw_b3lzG3j&pf_rd_r=J2CNPEQHCADWR64VQFRB&pf_rd_p=494b09f1-9e05-54be-aed3-d688c86ce16c&pf_rd_s=merchandised-search-10&pf_rd_t=BROWSE&pf_rd_i=3457486031">Voir sur Amazon</a>
             <nav class="watch-nav-info">
                 <ul id="menu-info">
-                    <li class="desc nav-button">Description</li>
+                    <li class="desc nav-button isActive">Description</li>
                     <li class="size nav-button">Propriétés</li>
-                    <li class="color nav-button">Colories</li>
+                    <li class="color-button nav-button">Colories</li>
                 </ul>
             </nav>
             <div class="main-card">
-                <div class="card-desc card" hidden>
+                <div class="card-desc card">
                     <ul>
                         <li>Le modèle GPS vous permet de prendre des appels et de répondre à des messages directement de votre poignet</li>
                         <li>Mesurez votre taux d’oxygène dans le sang grâce à un capteur et à une app révolutionnaires</li>
@@ -38,6 +40,7 @@
                         <li>Design étanche</li>
                         <li>Synchronisez vos musiques, podcasts et livres audio</li>
                     </ul>
+                    <div class="white-divider"></div>
                 </div>
                 <div class="card-info card" hidden>
                     <ul>
@@ -50,12 +53,13 @@
                         <li>Poids du boîtier : 30, 5 g / 36,5 g</li>
                         <li>Date de sortie du produit : 30/10/2020</li>
                     </ul>
+                    <div class="white-divider"></div>
                 </div>
                 <div class="card-color card" hidden>
                     <ul>
-                        <li>Noir</li>
-                        <li>Blanc</li>
-                        <li>Rouge</li>
+                        <li class="color" id="color-button1">Noir</li>
+                        <li class="color" id="color-button2">Blanc</li>
+                        <li class="color" id="color-button3">Rouge</li>
                     </ul>
                 </div>
             </div>
