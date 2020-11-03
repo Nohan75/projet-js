@@ -1,0 +1,104 @@
+*, ::before, ::after{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+}
+ol, li, ul{
+    list-style: none;
+}
+#apple-product{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.img{
+    width: 50%;
+    padding-top: 10%;
+}
+.watch-img{
+    width: 40%;
+}
+.watch-info{
+    width: 50%;
+    background-color: #3E3A39;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.watch-info h1, .watch-info h2{
+    color: #ffffff;
+}
+.watch-info h2{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.watch-info a{
+    color: #F3A847;
+    background-color: #f1f1f1;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+.watch-info a:hover{
+    color: #f1f1f1;
+    background-color: #F3A847;
+}
+.watch-nav-info{
+    width: 40%;
+    margin: 30px auto 0 auto;
+
+}
+#menu-info{
+    display: flex;
+    justify-content: space-around;
+    background-color: grey;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#menu-info li {
+    display: inline;
+    height: 30px;
+    width: 30%;
+    transition: all 0.4s ease-in-out;
+}
+#menu-info li:hover, .isActive {
+    background-color: #ffffff;
+}
+.main-card{
+    background-color: #c3c3c3;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: justify;
+}
+.card-desc li {
+    list-style: inside;
+    margin: 15px;
+}
+.card-info li {
+    margin: 15px;
+}
+.card-color li {
+    text-align: center;
+    cursor: pointer;
+    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 7px;
+}
+.card-color li:first-child{
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 7px;
+}
+.card-color li:last-child{
+    background-color: rgb(175, 6, 6);
+    border-radius: 3px;
+    padding: 7px;
+}
