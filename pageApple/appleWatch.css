@@ -10,7 +10,7 @@ body{
 .white-divider{
     height: 4px;
     width: 130px;
-    margin: 0 auto;
+    margin: 30px auto;
     background-color: #ffffff;
     border-radius: 7px;
 }
@@ -25,6 +25,13 @@ ol, li, ul{
 .img{
     width: 50%;
     padding-top: 10%;
+}
+.img i{
+    padding: 10px 12px;
+    color: #ffffff;
+    background-color: #3E3A39;
+    border-radius: 50%;
+    cursor: pointer;
 }
 .watch-img{
     width: 55%;
