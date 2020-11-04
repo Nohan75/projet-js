@@ -22,6 +22,12 @@ ol, li, ul{
     width: 100%;
     min-height: 100vh;
 }
+#prevPage{
+    position: absolute;
+    padding: 10px 12px;
+    background-color: rgba(204, 204, 204, 0.7);
+    cursor: pointer;
+}
 .img{
     width: 50%;
     padding-top: 10%;

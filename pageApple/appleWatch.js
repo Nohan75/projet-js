@@ -1,7 +1,17 @@
-let awButton = document.querySelectorAll('li.nav-button');
+const awButton = document.querySelectorAll('li.nav-button');
 
-let eHidden = document.querySelectorAll('.card');
+const eHidden = document.querySelectorAll('.card');
 
+
+const leftArrow = document.getElementById('prevPage');
+
+let pageTarget = window.location.href;
+
+localStorage.setItem('url', pageTarget);
+
+leftArrow.addEventListener('click', () => {
+    window.location.href = '../main.html';
+});
 
 
 awButton.forEach(button => {
