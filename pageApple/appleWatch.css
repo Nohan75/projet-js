@@ -65,7 +65,7 @@ ol, li, ul{
     background-color: #F3A847;
 }
 .watch-nav-info{
-    width: 40%;
+    width: 50%;
     margin: 30px auto 0 auto;
 
 }
@@ -87,7 +87,7 @@ ol, li, ul{
 }
 .main-card{
     background-color: #c3c3c3;
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
     border-radius: 3px;
     padding: 10px;
