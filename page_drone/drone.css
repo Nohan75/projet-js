@@ -40,7 +40,4 @@ h1 {
 .productImg {
     width: 200px;
     height: 200px;
-    border-radius: 10%;
-    border: 7px solid white;
-    background-color: darkgray;
 }
