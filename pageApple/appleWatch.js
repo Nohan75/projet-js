@@ -1,7 +1,13 @@
-let awButton = document.querySelectorAll('li.nav-button');
+const awButton = document.querySelectorAll('li.nav-button');
 
-let eHidden = document.querySelectorAll('.card');
+const eHidden = document.querySelectorAll('.card');
 
+const transitionAw = document.querySelector('.transition');
+window.onload = () => {
+    setTimeout(() => {
+        transitionAw.classList.remove('active');
+    }, 700);
+}
 
 
 awButton.forEach(button => {
