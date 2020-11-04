@@ -1,62 +1,46 @@
-/* display all cards */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2%;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+}
 
 .all-cards {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    font-size: x-large;
 }
 
-/* card et effets */
-
+/* CARD */
 .card {
     width: 500px;
     height: 500px;
-    background-color: transparent;
+    background-color: black;
     border-radius: 10%;
     margin-top: 8%;
     perspective: 1000px;
-}
-
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    color: whitesmoke;
     text-align: center;
-    transition: transform 2s;
-    transform-style: preserve-3d;
-}
-
-.card:hover .card-inner {
-    transform: rotateY(180deg);
-    cursor: grab;
-}
-
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.card-front {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5%;
-    background-color: whitesmoke;
-    color: black;
-    border-radius: 10%;
-}
-
-.card-back {
-    padding: 5%;
-    background-color: whitesmoke;
-    color: black;
-    transform: rotateY(180deg);
-    border-radius: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+.card.productImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* size of product img */
+.productImg {
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    border: 7px solid white;
+    background-color: darkgray;
 }

@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="drone.css">
     <title>Drones</title>
+    <h1>Drones</h1>
 </head>
+
 <body>
-    <div>
-        <h2>DJI Phantom</h2>
-        <img src="assets/kisspng-mavic-pro-dji-phantom-4-advanced-unmanned-aerial-v-dji-phantom-5b51fa15e44f25.8531311915320990939352.png"
-            alt="">
-        <button >Déscription</button>
-        <p id="descriptionDJI" hidden>Le drone DJI Phantom 4 Pro V2 améliore encore un peu plus les caractéristiques déjà très
-            généreuses de la première version. Il est équipé du système DJI OcuSync 2.0 qui remplace le Lightbridge.
-            L’OcuSync donnera une qualité de transmission de qualité et une portée de 4 à 8 km(selon les normes CE/FCC).
-    
-            DJI a revu la propulsion du drone qui dispose d’ESC plus performant et d’hélices plus silencieuses (-4dB) pour
-            un vol plus calme et sécurisé grâce aux capteurs du système FlightAutonomy.
-    
-            La caméra 1 Pouce 20 MP est toujours présente sur le DJI Phantom 4 Pro V2 pour des photos et vidéos en HD
-            encodées en H.264 et H.265 avec un débit de 100Mb/s</p>
-    
-        <h2>Mavic pro</h2>
-        <img src="assets/kisspng-mavic-pro-gopro-karma-unmanned-aerial-vehicle-quad-mavic-pro-5b20b212b4f1e9.1282239415288693947412.png"
-            alt="">
-        <button >Déscription</button>
-        <p id="descritptionMavic"></p>
-    
-        <h2>Canon EOS 5D</h2>
-        <img src="assets/kisspng-dji-unmanned-aerial-vehicle-aerial-photography-can-drone-png-photos-5a75359e107ca5.1313493215176308780675.png"
-            alt="">
-        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Déscription</button>
-        <p id="descriptionCanon"></p>
+    <div class="all-cards">
+        <div class="card">
+            <h2>DJI Phantom</h2>
+            <img class="productImg image" src="assets/580b57fbd9996e24bc43bfb5.png"
+                alt="image drone DJI phantom 4 pro">
+            <p class="description" hidden>Le drone DJI Phantom 4 Pro V2 améliore encore un peu plus les caractéristiques
+                déjà très
+                généreuses de la première version. Il est équipé du système DJI OcuSync 2.0 qui remplace le Lightbridge.
+                L’OcuSync donnera une qualité de transmission de qualité et une portée de 4 à 8 km(selon les normes
+                CE/FCC).
+
+                DJI a revu la propulsion du drone qui dispose d’ESC plus performant et d’hélices plus silencieuses
+                (-4dB)
+                pour
+                un vol plus calme et sécurisé grâce aux capteurs du système FlightAutonomy.
+
+                La caméra 1 Pouce 20 MP est toujours présente sur le DJI Phantom 4 Pro V2 pour des photos et vidéos en
+                HD
+                encodées en H.264 et H.265 avec un débit de 100Mb/s
+            </p>
+            <p hidden>1500 €</p>
+            <button class="product dji" value="description1">Déscription</button>
+            <button>Prix</button>
+        </div>
+        <div class="card">
+            <h2>Mavic pro</h2>
+            <img class="productImg image" src="assets/kisspng-mavic-pro-gopro-karma-unmanned-aerial-vehicle-quad-mavic-pro-5b20b212b4f1e9.1282239415288693947412.png"
+                alt="image drone Mavic pro">
+            <p class="description" hidden>DESCRIPTION DU MAVIC PRO
+            </p>
+            <button class="product mavic" value="description2">Déscription</button>
+            <button>Prix</button>
+        </div>
+        <div class="card">
+            <h2>Canon EOS 5D</h2>
+            <img class="productImg image" src="assets/kisspng-dji-unmanned-aerial-vehicle-aerial-photography-can-drone-png-photos-5a75359e107ca5.1313493215176308780675.png"
+                alt="image drone Canon EOS 5D">
+            <p class="description" hidden>DESCRIPTION DU CANON EOS 5D
+            </p>
+            <button class="product canon" value="description3">Déscription</button>
+            <button>Prix</button>
+        </div>
     </div>
 </body>
+
 </html>
 <script src="drone.js"></script>
