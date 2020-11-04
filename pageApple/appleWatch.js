@@ -2,12 +2,16 @@ const awButton = document.querySelectorAll('li.nav-button');
 
 const eHidden = document.querySelectorAll('.card');
 
-const transitionAw = document.querySelector('.transition');
-window.onload = () => {
-    setTimeout(() => {
-        transitionAw.classList.remove('active');
-    }, 700);
-}
+
+const leftArrow = document.getElementById('prevPage');
+
+let pageTarget = window.location.href;
+
+localStorage.setItem('url', pageTarget);
+
+leftArrow.addEventListener('click', () => {
+    window.location.href = '../main.html';
+});
 
 
 awButton.forEach(button => {
