@@ -1,89 +1,40 @@
-const awButton = document.getElementsByClassName('nav-button');
+let awButton = document.querySelectorAll('li.nav-button');
 
-const eHidden = document.getElementsByClassName('card');
+let eHidden = document.querySelectorAll('.card');
 
 
-let getSiblings = function (e) {
-    // for collecting siblings
-    let siblings = []; 
-    // if no parent, return no sibling
-    if(!e.parentNode) {
-        return siblings;
-    }
-    // first child of the parent node
-    let sibling  = e.parentNode.firstChild;
-    // collecting siblings
-    while (sibling) {
-        if (sibling.nodeType === 1 && sibling !== e) {
-            siblings.push(sibling);
+
+awButton.forEach(button => {
+    button.addEventListener('click', () => {
+        awButton.forEach(element => element.classList.remove('isActive'));
+        button.classList.add('isActive');
+    });
+});
+
+awButton.forEach(button => {
+    button.addEventListener('click', () => {
+        eHidden.forEach(card => card.setAttribute('hidden', ''));
+        switch (button.id){
+            case 'desc':
+                eHidden[0].removeAttribute('hidden');
+                break;
+            case 'props':
+                eHidden[1].removeAttribute('hidden');
+                break;
+            case 'color-button':
+                eHidden[2].removeAttribute('hidden');
+                break;
         }
-        sibling = sibling.nextSibling;
-    }
-    return siblings;
-};
-let siblings = getSiblings(document.querySelector('.nav-button'));
-siblingText = siblings.map(e => e.innerHTML);
-console.log(siblingText);
+    });
+});
 
 
-function showCard() {
-    for(let i = 0; i < awButton.length; i++){
-        awButton[i].addEventListener("click", () => {
-            switch (i) {
-                case 0:
-                    eHidden[i].removeAttribute('hidden');
-                    eHidden[1].setAttribute('hidden', '');
-                    eHidden[2].setAttribute('hidden', '');
-                    break;
-                case 1:
-                    eHidden[i].removeAttribute('hidden');
-                    eHidden[0].setAttribute('hidden', '');
-                    eHidden[2].setAttribute('hidden', '');
-                    break;
-                case 2:
-                    eHidden[i].removeAttribute('hidden');
-                    eHidden[0].setAttribute('hidden', '');
-                    eHidden[1].setAttribute('hidden', '');
-                    break;
-            
-                default:
-                    break;
-            }
-        });
-        
-    }
-}
-showCard();
 
-function activeButton() {
-    for(let i = 0; i < awButton.length; i++){
-        awButton[i].addEventListener("click", () => {
-            switch (i){
-                case 0:
-                    awButton[i].classList.add('isActive');
-                    awButton[1].classList.remove('isActive');
-                    awButton[2].classList.remove('isActive');
-                    break;
-                case 1:
-                    awButton[0].classList.remove('isActive');
-                    awButton[i].classList.add('isActive');
-                    awButton[2].classList.remove('isActive');
-                    break;
-                case 2:
-                    awButton[0].classList.remove('isActive');
-                    awButton[1].classList.remove('isActive');
-                    awButton[i].classList.add('isActive');
-                    break;
-            }
-        });
-    }
-}
-activeButton();
 
 const colorButton = document.getElementsByClassName('color');
 let selectImg = document.querySelector('img.watch-img');
 
-function changeImg(event) {
+function changeImg() {
     for(let j = 0; j < colorButton.length; j++){
         colorButton[j].addEventListener("click", () => {
             switch (j){

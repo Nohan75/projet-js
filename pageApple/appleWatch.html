@@ -6,10 +6,11 @@
     <title>Apple Watch Serie 6</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="transition.css">
     <link rel="stylesheet" href="appleWatch.css">
 </head>
 <body>
-
+    <div class="transition transition-1 active"></div>
     <section id="apple-product">
         <div class="img">
             <i class="fas fa-chevron-left"></i>
@@ -24,9 +25,9 @@
             <a target="_blank" href="https://www.amazon.fr/Nouveau-Apple-Watch-aluminium-gris-sid%C3%A9ral-Bracelet-Sport/dp/B08J6N7LFW?ref_=Oct_s9_apbd_otopr_hd_bw_b3lzG3j&pf_rd_r=J2CNPEQHCADWR64VQFRB&pf_rd_p=494b09f1-9e05-54be-aed3-d688c86ce16c&pf_rd_s=merchandised-search-10&pf_rd_t=BROWSE&pf_rd_i=3457486031">Voir sur Amazon</a>
             <nav class="watch-nav-info">
                 <ul id="menu-info">
-                    <li class="desc nav-button isActive">Description</li>
-                    <li class="size nav-button">Propriétés</li>
-                    <li class="color-button nav-button">Couleurs</li>
+                    <li class="nav-button isActive" id="desc">Description</li>
+                    <li class="nav-button" id="props">Propriétés</li>
+                    <li class="nav-button" id="color-button">Couleurs</li>
                 </ul>
             </nav>
             <div class="main-card">
