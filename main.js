@@ -29,7 +29,8 @@ let nbDrone = localStorage.getItem('addDrone');
 const panierContent = document.querySelector('.panier-content');
 const tablePanier = document.querySelector('.list-panier');
 let elementInCard = parseInt(cart.innerHTML) + parseInt(nbPhone);
-console.log(nbPhone);
+
+
 window.addEventListener('load', () => {
     cart.innerHTML = elementInCard;
 });
@@ -38,14 +39,28 @@ window.addEventListener('load', () => {
 cart.addEventListener('click', () => {popupCart.style.display = 'block';});
 crossBack.addEventListener('click', () => {popupCart.style.display = 'none';})
 
-cart.addEventListener('click', () => {
+if(nbPhone > 0){
+    let newRow = document.createElement('tr');
+    newRow.innerHTML = '<td>Huawei</td><td>Nombre : ' + nbPhone + '</td>';
+    tablePanier.append(newRow);
+}
+if(nbAw > 0){
+    let newRow = document.createElement('tr');
+    newRow.innerHTML = '<td>Apple Watch</td><td>Nombre : ' + nbAw + '</td>';
+    tablePanier.append(newRow);
+}
+if(nbDrone > 0){
+    let newRow = document.createElement('tr');
+    newRow.innerHTML = '<td>Drone</td><td>Nombre : ' + nbDrone + '</td>';
+    tablePanier.append(newRow);
+}
 
-    if(elementInCard === 0){
-        console.log(elementInCard);
-        panierContent.innerHTML = '<p>Le panier est vide</p>';
-    } else {
-        panierContent.innerHTML = '<p>Le panier est supérieur à '+elementInCard+'</p>';
-    }
-});
+
+
+
+
+
+
+
 
 
