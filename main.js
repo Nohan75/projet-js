@@ -27,6 +27,7 @@ let nbPhone = localStorage.getItem('addPhone');
 let nbAw = localStorage.getItem('addAw');
 let nbDrone = localStorage.getItem('addDrone');
 const panierContent = document.querySelector('.panier-content');
+const tablePanier = document.querySelector('.list-panier');
 let elementInCard = parseInt(cart.innerHTML) + parseInt(nbPhone);
 console.log(nbPhone);
 window.addEventListener('load', () => {
@@ -40,6 +41,7 @@ crossBack.addEventListener('click', () => {popupCart.style.display = 'none';})
 cart.addEventListener('click', () => {
 
     if(elementInCard === 0){
+        console.log(elementInCard);
         panierContent.innerHTML = '<p>Le panier est vide</p>';
     } else {
         panierContent.innerHTML = '<p>Le panier est supérieur à '+elementInCard+'</p>';
