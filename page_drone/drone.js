@@ -3,6 +3,7 @@ window.addEventListener('click', unhideDescription);
 
 // On stock dans une variable (sous forme de tableau) toutes les informations des bouttons qui ont la class 'product'
 const buttonProduct = document.getElementsByClassName('product');
+console.log("===================")
 console.log(buttonProduct);
 
 
