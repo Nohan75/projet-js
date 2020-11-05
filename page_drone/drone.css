@@ -52,15 +52,14 @@ button {
     height: auto;
     margin: 10px;
     justify-content: center;
-    background-color: firebrick;
+    background-color: whitesmoke;
     border: none;
     border-radius: 100%;
 }
 
 button:hover {
-    background-color: #f44336;
     border: none;
-    color: white;
+    color: blue;
 }
 
 

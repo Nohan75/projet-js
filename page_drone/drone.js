@@ -42,3 +42,18 @@ function unhideDescription(event) {
             break;
     }
 }
+
+// Pour le panier 
+
+let totalDJI = 0;
+let totalMavic = 0;
+let totalCanon = 0;
+
+window.addEventListener('click', addToCart)
+
+function addToCart(event) {
+    if (event.target.id == 'add_cart') {
+        totalDJI = totalDJI + 1;
+        localStorage.setItem('dji', totalDJI)
+    }
+}
