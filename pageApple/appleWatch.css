@@ -39,6 +39,13 @@ ol, li, ul{
     border-radius: 50%;
     cursor: pointer;
 }
+#add_cart{
+    padding: 15px;
+    background-color: #3E3A39;
+    border-style: none;
+    border-radius: 30px;
+    color: #ffffff;
+}
 .watch-img{
     width: 55%;
 }

@@ -38,6 +38,15 @@ awButton.forEach(button => {
     });
 });
 
+let totalAw =0;
+window.addEventListener('click', addToCart)
+
+function addToCart(event) {
+    if (event.target.id == 'add_cart') {
+        totalAw++;
+        localStorage.setItem('addAw', totalAw)
+    }
+}
 
 
 
