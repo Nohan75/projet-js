@@ -6,21 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huawei P40 Pro</title>
     <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
-    <h1>Welcome to your phone page !</h1>
+        <i id="prevPage" class="fas fa-arrow-left"></i>
+        <h1>Welcome to your phone page !</h1>
     <div id="main_container">
         <div id="image">
             <img src="image/phone_face.jpg" alt="image Huawei P40 Pro" id="phone_img">
-            <button id="buy">Acheter !!</button>
-            <button class="img"><img src="image/p40.jpg" alt="" width="50" height="50" id="left"></button>
-            <button class="img"><img src="image/phone.png" alt="" width="50" height="50" id="back"></button>
-            <button class="img"><img src="image/phone_right.jpg" alt="" width="50" height="50" id="right"></button>
-            <button class="img"><img src="image/phone_bottom.jpg" alt="" width="50" height="50" id="bottom"></button>
-            <button class="img"><img src="image/phone_side.jpg" alt="" width="50" height="50" id="side"></button>
-            <button class="img"><img src="image/phone_ep.jpg" alt="" width="50" height="50" id="ep"></button>
-            <button class="img"><img src="image/phone_face.jpg" alt="" width="50" height="50" id="face"></button>
+            <div id="buttons">
+                <div id="buy_buttons">
+                    <button id="buy">Acheter !!</button>
+                    <button id="add_cart">Ajouter au panier</button>
+                </div>
+                <div id="img buttons">
+                <button class="img"><img src="image/p40.jpg" alt="" width="50" height="50" id="left"></button>
+                <button class="img"><img src="image/phone.png" alt="" width="50" height="50" id="back"></button>
+                <button class="img"><img src="image/phone_right.jpg" alt="" width="50" height="50" id="right"></button>
+                <button class="img"><img src="image/phone_bottom.jpg" alt="" width="50" height="50" id="bottom"></button>
+                <button class="img"><img src="image/phone_side.jpg" alt="" width="50" height="50" id="side"></button>
+                <button class="img"><img src="image/phone_ep.jpg" alt="" width="50" height="50" id="ep"></button>
+                <button class="img"><img src="image/phone_face.jpg" alt="" width="50" height="50" id="face"></button>
+                </div>
+            </div>
         </div>
         <div id="right_pannel">
             <div id="caracteristique">
@@ -69,5 +78,5 @@
 </body>
 
 </html>
-<script src="phone.js">
-</script>
+<script src="phone.js"></script>
+<script src="../panier.js"></script>

@@ -1,5 +1,12 @@
 let img =document.getElementById("phone_img");
-console.log(img);
+
+const leftArrow = document.getElementById('prevPage');
+let pageTarget = window.location.href;
+
+localStorage.setItem('url', pageTarget);
+leftArrow.addEventListener('click', () => {
+    window.location.href = '../main.html';
+});
 
 window.addEventListener('click', changeImage);
 
@@ -33,3 +40,12 @@ function changeImage(event) {
     }
 }
 
+let totalPhone =0;
+window.addEventListener('click', addToCart)
+
+function addToCart(event) {
+    if (event.target.id == 'add_cart') {
+        totalPhone=totalPhone+1;
+        localStorage.setItem('addPhone', totalPhone)
+    }
+}
