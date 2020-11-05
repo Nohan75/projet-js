@@ -28,12 +28,27 @@ let nbAw = localStorage.getItem('addAw');
 let nbDrone = localStorage.getItem('addDrone');
 const panierContent = document.querySelector('.panier-content');
 const tablePanier = document.querySelector('.list-panier');
-let elementInCard = parseInt(cart.innerHTML) + parseInt(nbPhone);
+let elementInCard = toInt(nbDrone) + toInt(nbAw) + toInt(nbPhone);
 
+console.log(nbPhone);
+console.log(nbAw);
+console.log(nbDrone);
+console.log(nbDrone === null);
 
 window.addEventListener('load', () => {
-    cart.innerHTML = elementInCard;
+    let total
+    if(nbDrone === null || nbAw === null || nbPhone === null){
+        total = toInt(nbDrone) + toInt(nbAw) + toInt(nbPhone);
+    }
+    cart.innerHTML = total;
+    
 });
+function toInt(nb){
+    if(nb === null){
+        nb = '0'
+    }
+    return parseInt(nb);
+}
 
 
 cart.addEventListener('click', () => {popupCart.style.display = 'block';});
