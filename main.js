@@ -50,6 +50,13 @@ function toInt(nb){
     return parseInt(nb);
 }
 
+const clearButton = document.querySelector('.clear');
+
+clearButton.addEventListener('click', () => {
+    localStorage.clear();
+    window.location.reload();
+});
+
 
 cart.addEventListener('click', () => {popupCart.style.display = 'block';});
 crossBack.addEventListener('click', () => {popupCart.style.display = 'none';})
