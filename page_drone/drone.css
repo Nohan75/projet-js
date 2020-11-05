@@ -40,6 +40,7 @@ hr {
     justify-content: center;
 }
 
+
 /* size of product img */
 
 .productImg {
@@ -62,6 +63,9 @@ button:hover {
     color: blue;
 }
 
+.padding {
+    margin: 10%;
+}
 
 /* footer */
 
@@ -70,4 +74,13 @@ footer {
     background-color: black;
     color: whitesmoke;
     padding: 2%;
+}
+
+#prevPage{
+    position: absolute;
+    padding: 10px 12px;
+    background-color: rgba(204, 204, 204, 0.7);
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
 }

@@ -52,8 +52,25 @@ let totalCanon = 0;
 window.addEventListener('click', addToCart)
 
 function addToCart(event) {
-    if (event.target.id == 'add_cart') {
+    if (event.target.id == 'add_cart_dji') {
         totalDJI = totalDJI + 1;
         localStorage.setItem('dji', totalDJI)
+    } else if (event.target.id == 'add_cart_mavic') {
+        totalMavic = totalMavic + 1;
+        localStorage.setItem('mavic', totalMavic)
+        console.log('MAVIC');
+    } else if (event.target.id == 'add_cart_canon') {
+        totalCanon = totalCanon + 1;
+        localStorage.setItem('canon', totalCanon)
+        console.log('CANON');
     }
 }
+
+
+const leftArrow = document.getElementById('prevPage');
+let pageTarget = window.location.href;
+
+localStorage.setItem('url', pageTarget);
+leftArrow.addEventListener('click', () => {
+    window.location.href = '../main.html';
+});
