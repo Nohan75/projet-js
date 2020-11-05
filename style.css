@@ -1,0 +1,40 @@
+*, ::before, ::after{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+i.fa-shopping-cart{
+    position: absolute;
+    font-size: 30px;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.card-panier{
+    display: none;
+    height: 700px;
+    width: 700px;
+    background-color: #777777;
+    border-radius: 20px;
+    margin: auto auto;
+}
+.card-panier h1{
+    text-align: center;
+}
+.cross-back{
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.panier-content{
+    width: 70%;
+    height: 70%;
+    background-color: grey;
+    border-radius: 20px;
+    padding: 10px;
+    margin: auto;
+}
