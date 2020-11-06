@@ -3,6 +3,7 @@ let img =document.getElementById("phone_img");
 const leftArrow = document.getElementById('prevPage');
 let pageTarget = window.location.href;
 
+ //permet de revenir à la page main
 localStorage.setItem('url', pageTarget);
 leftArrow.addEventListener('click', () => {
     window.location.href = '../main.html';
@@ -10,6 +11,7 @@ leftArrow.addEventListener('click', () => {
 
 window.addEventListener('click', changeImage);
 
+//Permet de changer l'image principale du site en fonction des boutons cliqués
 function changeImage(event) {
     console.log(event);
     switch (event.target.id) {
@@ -40,17 +42,19 @@ function changeImage(event) {
     }
 }
 
+//Partie du panier
 let totalPhone =0;
 
 let currentPhone=localStorage.getItem('addPhone');
 
+//Si il y a déja des phone dans le localStorage, évite que totaPhone reparte à 0
 if (parseInt(currentPhone)>=1) {
     totalPhone=parseInt(currentPhone);
 }
 console.log(totalPhone);
 
 
-
+//Ajoute x phone au panier, un clic= x++
 window.addEventListener('click', addToCart)
 function addToCart(event) {
     if (event.target.id == 'add_cart') {
