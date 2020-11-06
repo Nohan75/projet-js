@@ -3,9 +3,6 @@ window.addEventListener('click', unhideDescription);
 
 // On stock dans une variable (sous forme de tableau) toutes les informations des bouttons qui ont la class 'product'
 const buttonProduct = document.getElementsByClassName('product');
-console.log("===================")
-console.log(buttonProduct);
-
 
 const hideImg = document.getElementsByClassName('image');
 console.log(hideImg);
@@ -45,48 +42,56 @@ function unhideDescription(event) {
 
 // Pour le panier 
 
+// variable pour stocker le nombre de produit a mettre dans le panier
 let totalDJI = 0;
 let totalMavic = 0;
 let totalCanon = 0;
 
 
-let currentDJI=localStorage.getItem('dji');
-if (parseInt(currentDJI)>=1) {
-    totalDJI=parseInt(currentDJI);
+// permet de recuper la valeur de DJI deja dans le local storage
+let currentDJI = localStorage.getItem('dji');
+// stock dans totalDJI et transform en INT currentDJI
+if (parseInt(currentDJI) >= 1) {
+    totalDJI = parseInt(currentDJI);
 }
 
-let currentMavic=localStorage.getItem('mavic');
-if (parseInt(currentMavic)>=1) {
-    totalMavic=parseInt(currentMavic);
+let currentMavic = localStorage.getItem('mavic');
+if (parseInt(currentMavic) >= 1) {
+    totalMavic = parseInt(currentMavic);
 }
 
-let currentCanon=localStorage.getItem('canon');
-if (parseInt(currentCanon)>=1) {
-    totalCanon=parseInt(currentCanon);
+let currentCanon = localStorage.getItem('canon');
+if (parseInt(currentCanon) >= 1) {
+    totalCanon = parseInt(currentCanon);
 }
 
+// ecoute un clic sur la fenetre et appel la focntion addToCart
 window.addEventListener('click', addToCart)
 
+// prend en parametre event qui correspond au info renvoyer par 'window.addEventListener'
 function addToCart(event) {
+    // si le bouton cliquer est 'add_cart_dji'
     if (event.target.id == 'add_cart_dji') {
         totalDJI = totalDJI + 1;
+        // ajout dans le local storage et creation de 'dji' pour stocker dedans
         localStorage.setItem('dji', totalDJI)
     } else if (event.target.id == 'add_cart_mavic') {
         totalMavic = totalMavic + 1;
         localStorage.setItem('mavic', totalMavic)
-        console.log('MAVIC');
     } else if (event.target.id == 'add_cart_canon') {
         totalCanon = totalCanon + 1;
         localStorage.setItem('canon', totalCanon)
-        console.log('CANON');
     }
 }
 
-
+// recupere les info sur la class 'prevPage'
 const leftArrow = document.getElementById('prevPage');
+// recupere le lien de la page
 let pageTarget = window.location.href;
+console.log(pageTarget);
 
 localStorage.setItem('url', pageTarget);
+
 leftArrow.addEventListener('click', () => {
     window.location.href = '../main.html';
 });
