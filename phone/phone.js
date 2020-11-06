@@ -41,11 +41,20 @@ function changeImage(event) {
 }
 
 let totalPhone =0;
-window.addEventListener('click', addToCart)
 
+let currentPhone=localStorage.getItem('addPhone');
+
+if (parseInt(currentPhone)>=1) {
+    totalPhone=parseInt(currentPhone);
+}
+console.log(totalPhone);
+
+
+
+window.addEventListener('click', addToCart)
 function addToCart(event) {
     if (event.target.id == 'add_cart') {
         totalPhone=totalPhone+1;
-        localStorage.setItem('addPhone', totalPhone)
+        localStorage.setItem('addPhone',totalPhone);
     }
 }
