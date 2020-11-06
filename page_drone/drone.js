@@ -49,6 +49,22 @@ let totalDJI = 0;
 let totalMavic = 0;
 let totalCanon = 0;
 
+
+let currentDJI=localStorage.getItem('dji');
+if (parseInt(currentDJI)>=1) {
+    totalDJI=parseInt(currentDJI);
+}
+
+let currentMavic=localStorage.getItem('mavic');
+if (parseInt(currentMavic)>=1) {
+    totalMavic=parseInt(currentMavic);
+}
+
+let currentCanon=localStorage.getItem('canon');
+if (parseInt(currentCanon)>=1) {
+    totalCanon=parseInt(currentCanon);
+}
+
 window.addEventListener('click', addToCart)
 
 function addToCart(event) {
@@ -74,4 +90,3 @@ localStorage.setItem('url', pageTarget);
 leftArrow.addEventListener('click', () => {
     window.location.href = '../main.html';
 });
-
