@@ -74,3 +74,4 @@ localStorage.setItem('url', pageTarget);
 leftArrow.addEventListener('click', () => {
     window.location.href = '../main.html';
 });
+
