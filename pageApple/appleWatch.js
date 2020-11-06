@@ -39,6 +39,14 @@ awButton.forEach(button => {
 });
 
 let totalAw =0;
+
+let currentAw=localStorage.getItem('addAw');
+
+if (parseInt(currentAw)>=1) {
+    totalAw=parseInt(currentAw);
+}
+console.log(totalAw);
+
 window.addEventListener('click', addToCart)
 
 function addToCart(event) {
