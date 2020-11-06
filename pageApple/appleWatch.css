@@ -45,6 +45,7 @@ ol, li, ul{
     border-style: none;
     border-radius: 30px;
     color: #ffffff;
+    cursor: pointer;
 }
 .watch-img{
     width: 55%;
